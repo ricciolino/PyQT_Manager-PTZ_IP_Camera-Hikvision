@@ -18,9 +18,9 @@ camera = ctypes.cdll.LoadLibrary('./ptz_camera_lib.so')
 address = 'xxx.xxx.xxx.xxx'
 user = 'xxxxxx'
 psw = 'xxxxxx'
-ctype_address = ctypes.create_string_buffer(b'xxx.xxx.xxx.xxx')
-ctype_user = ctypes.create_string_buffer(b'xxxxxx')
-ctype_psw = ctypes.create_string_buffer(b'xxxxxx')
+ctype_address = ctypes.create_string_buffer(address.encode())
+ctype_user = ctypes.create_string_buffer(user.encode())
+ctype_psw = ctypes.create_string_buffer(psw.encode())
 port = 8000
 
 # ptz params
